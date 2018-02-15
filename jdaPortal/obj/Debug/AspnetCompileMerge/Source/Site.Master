@@ -1,0 +1,577 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="jdaPortal.Site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>It could have been us.</title>
+    <link href="<%=ResolveUrl("~/Framework/Gentellela/css/bootstrap.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Framework/Gentellela/css/font-awesome.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Framework/gc-scrollbar.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Framework/Gentellela/css/custom.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Framework/Gentellela/css/switchery.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Libraries/bootpaging.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Framework/labelauty/jquery-labelauty.css") %>" rel="stylesheet" />
+    <style>
+        
+        @font-face {
+            font-family: 'caviar_dreamsregular';
+            src: url('Framework/fonts/CaviarRegular/CaviarDreams-webfont.eot');
+            src: url('Framework/fonts/CaviarRegular/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('Framework/fonts/CaviarRegular/CaviarDreams-webfont.woff') format('woff'),
+                    url('Framework/fonts/CaviarRegular/CaviarDreams-webfont.ttf') format('truetype'),
+                    url('Framework/fonts/CaviarRegular/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'lobster_regular';
+            src: url('Framework/fonts/lobsterRegular/lobster-regular-webfont.woff') format('woff'),
+                    url('Framework/fonts/lobsterRegular/lobster-regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .myNotify {
+            display: none;
+            width: 200px;
+            height: 20px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+            top: 80px;
+            background-color: #090909;
+            color: #F0F0F0;
+            font-family: Calibri;
+            font-size: 15px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            z-index: 99999;
+            -webkit-box-shadow: 0px 0px 10px -1px rgba(35,35,35,1);
+            -moz-box-shadow: 0px 0px 10px -1px rgba(35,35,35,1);
+            box-shadow: 0px 0px 10px -1px rgba(35,35,35,1);
+        }
+    </style>
+    <style>
+        .roundedSearch{
+            border-radius: 0 25px 25px 0;
+        }
+        .darkerSearchInput {
+            background-color: #efefef;
+        }
+        .hiddenAdminPage {
+            display:none;
+        }
+        .btn {
+            border-radius:25px;
+            margin:0;
+        }
+        .modal-header {
+            background-color: #3c5a78;/*2A3F54*/
+            color:white;
+            border-radius: 9px 9px 0 0;
+            
+        }
+        .modal-header h3, 
+        .modal-header h4, 
+        .modal-header h5 {
+            font-family: Candara,Calibri,'Calisto MT';
+            text-shadow: 0 1px 4px #000;
+        }
+        .modal-header span {
+            border: 1px solid #fff;
+            padding: 0 6px;
+            border-radius: 20px;
+        }
+        .btn-action {
+            background-color: #3c5a78;
+        }
+        .modal-content {
+            border-radius: 10px;
+        }
+        .modal-footer {
+            padding:6px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body class="nav-md">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+        <div id="notifyMe" class="myNotify"></div>
+    </div>
+    <form id="form1" runat="server">
+        <div class="container body">
+          <div class="main_container">
+            <div class="col-md-3 left_col">
+              <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                  <a href="/Default.aspx" class="site_title"><i class="fa fa-sellsy"></i> <span>JDA Reports</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile">
+                  <div class="profile_pic">
+                    <img src="img/avatar/Male-3.jpg" alt="..." class="img-circle profile_img" style="padding:2px;border: none;" runat="server" id="usrAvatar" />
+                  </div>
+                  <div class="profile_info">
+                    <span>Welcome,</span>
+                    <h2><asp:Label ID="lblUserFirstName" runat="server" Text="John Doe"></asp:Label></h2>
+                  </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br />
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                  <div class="menu_section">
+                    <h3>General</h3>
+                    <ul id="menu" class="nav side-menu">
+
+                    </ul>
+                  </div>
+
+                </div>
+                <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+                <div class="sidebar-footer hidden-small">
+                  <a data-toggle="tooltip" data-placement="top" title="Settings">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                  </a>
+                  <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                    <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                  </a>
+                  <a data-toggle="tooltip" data-placement="top" title="Lock">
+                    <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                  </a>
+                  <a data-toggle="tooltip" data-placement="top" title="Logout">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                  </a>
+                </div>
+                <!-- /menu footer buttons -->
+              </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+              <div class="nav_menu">
+                <nav class="" role="navigation">
+                  <div class="nav toggle">
+                    <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                  </div>
+
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                      <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="~/img/avatar/Male-1.jpg"  id="navavatar" runat="server" alt="" /><asp:Label ID="lblUsrNameData" runat="server" Text="John Doe"></asp:Label>
+                        <span class=" fa fa-angle-down"></span>
+                      </a>
+                      <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <%--<li><a href="<%=ResolveUrl("~/User/Profile.aspx") %>"> Profile</a></li>--%>
+                        <li><a id="changePass" data-toggle="modal" data-target="#modal_changePass">Change Password</a></li>
+                        <li><a id="emailConcern" data-toggle="modal" data-target="#modal_concern">Email Concerns</a></li>
+                        <li><asp:HyperLink ID="adminPage" runat="server" Visible="true" NavigateUrl="~/User/AdminPage.aspx" ><i class="fa fa-bed pull-right"></i> Admin Page</asp:HyperLink></li>
+                        <li><a href="<%=ResolveUrl("~/User/Logout.aspx") %>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                      </ul>
+                        
+                    </li>
+
+                    <li role="presentation" class="dropdown">
+                      <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-green">6</span>
+                      </a>
+                      <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                        <li>
+                          <a>
+                            <span class="image"><img src="<%=ResolveUrl("~/img/avatar/Male-1.jpg") %>" alt="Profile Image" /></span>
+                            <span>
+                              <span>Johny Derp</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                            <span class="message">
+                              I think everybody's weird. We should all celebrate our individuality and not be embarrassed or ashamed of it.
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a>
+                            <span class="image"><img src="<%=ResolveUrl("~/img/avatar/feMale-1.jpg") %>" alt="Profile Image" /></span>
+                            <span>
+                              <span>Selena Gone Miss</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                            <span class="message">
+                              People are put into your life for seasons, for different reasons, and to teach you lessons.
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a>
+                            <span class="image"><img src="<%=ResolveUrl("~/img/avatar/Male-2.jpg") %>" alt="Profile Image" /></span>
+                            <span>
+                              <span>Coco Martini</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                            <span class="message">
+                              There was never an us.. :'(
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a>
+                            <span class="image"><img src="<%=ResolveUrl("~/img/avatar/feMale-2.jpg") %>" alt="Profile Image" /></span>
+                            <span>
+                              <span>Anne Cure this</span>
+                              <span class="time">3 mins ago</span>
+                            </span>
+                            <span class="message">
+                              Cheating is not an accident. It's a choice.
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <div class="text-center">
+                            <a>
+                              <strong>See All Alerts</strong>
+                              <i class="fa fa-angle-right"></i>
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main" style="z-index: -4;">
+              <div class="">
+                <asp:ContentPlaceHolder ID="body" runat="server">
+
+                </asp:ContentPlaceHolder>
+              </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+              <div class="pull-right">
+                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+              </div>
+              <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+        <asp:HiddenField runat="server" ID="setSessionVarHere"></asp:HiddenField>
+
+        <!-- Modal for change password start here -->
+        <div class="modal fade" id="modal_changePass" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4>Change Password <small>Ma ilisan man ganing Uyab, Password pa kaha?</small></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group row">
+                                <label for="chgp_current_pass" class="col-xs-5 col-form-label control-label">Current Password</label>
+                                <div class="col-xs-5">
+                                    <input class="form-control" type="password" id="chgp_current_pass" placeholder="Your Login Password"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="chgp_new_pass" class="col-xs-5 col-form-label control-label">New Password</label>
+                                <div class="col-xs-5">
+                                    <input class="form-control" type="password" id="chgp_new_pass" placeholder="Your New Password" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="chgp_confirm_pass" class="col-xs-5 col-form-label control-label">New Password</label>
+                                <div class="col-xs-5">
+                                    <input class="form-control" type="password" id="chgp_confirm_pass" placeholder="Confirm New Password" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="savePassword" type="button" class="btn btn-primary btn-action">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for change password end -->
+        <!-- Modal for email Concern -->
+        <div class="modal fade" id="modal_concern" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content" >
+                    <div class="modal-header" >
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4>Concerns <small>Bitter people are not interested in what you say, but what you hide.</small></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <textarea class="form-control" id="concernDtls" rows="7" style="resize:none;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="sendEmail" type="button" class="btn btn-primary btn-action" >Send Email</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Modal for email Concern -->
+        <asp:HiddenField ID="hdmfxyxsf" runat="server" /> usrFullName,usrEmail
+        <asp:HiddenField ID="usrFullName" runat="server" />
+        <asp:HiddenField ID="usrEmail" runat="server" />
+        
+    </form>
+    
+    <script src="<%=ResolveUrl("Framework/Gentellela/js/jquery.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Framework/Gentellela/js/bootstrap.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Framework/Gentellela/js/switchery.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Framework/Gentellela/js/custom.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Libraries/bs.pagination.js") %>"></script>
+    <script src="<%=ResolveUrl("~/Framework/labelauty/jquery-labelauty.js") %>"></script>
+    <script>
+        $(document).ready(function () {
+            $(':checkbox').labelauty({ minimum_width: true });
+            function showMsg(msg) {
+
+                $('#notifyMe').text(msg);
+                $('#notifyMe').stop(true).fadeIn(400).delay(2000).fadeOut(400);
+            }
+
+            $.ajax({
+                url: '../data/MenuHandler.ashx',
+                method: 'get',
+                dataType: 'json',
+                success: function (data) {
+                    buildMenu($('#menu'), data);
+                }
+            });
+
+            function buildMenu(parent, items) {
+                $.each(items, function () {
+                    var li;
+                    if (!this.menuLink) {
+
+                        var iconClass;
+                        var accordionBtnText = this.menuTxt;
+
+                        switch (accordionBtnText) {
+                            case 'Merchandising':
+                                iconClass = 'fa fa-shopping-cart';
+                                break;
+                            case 'Accounting':
+                                iconClass = 'fa fa-bar-chart';
+                                break;
+                            case 'Cash Management':
+                                iconClass = 'fa fa-money';
+                                break;
+                            case 'Compliance':
+                                iconClass = 'fa fa-taxi';
+                                break;
+                            case 'Operations':
+                                iconClass = 'fa fa-globe';
+                                break;
+                            case 'Concessions':
+                                iconClass = 'fa fa-external-link';
+                                break;
+                            case 'Inventory Management':
+                                iconClass = 'fa fa-archive';
+                                break;
+                            default:
+                                iconClass = 'fa fa-bomb';
+                                break;
+                        }
+
+                        li = $('<li><a class="header"></span><i class="' + iconClass + '"></i>' + accordionBtnText + '<span class="fa fa-chevron-down"></span></a></li>');
+                    } else {
+                        
+                        li = $('<li><a href="../Pages/DataPage.aspx?ReportName=' + this.reportFilename + '&ReportType=' + this.reportType + '" id="' + this.reportFilename + '" class="viewReports" >' + this.menuTxt + '</a></li>');
+                        
+                    }
+                    if (!this.isActive) {
+                        li.addClass('ui-state-disabled');
+                    }
+                    li.appendTo(parent);
+
+                    if (this.menuList && this.menuList.length > 0) {
+                        var ul = $('<ul class="nav child_menu"></ul>');
+                        ul.appendTo(li);
+                        buildMenu(ul, this.menuList);
+                    }
+                });
+            };
+
+            $('#savePassword').on('click', function () {
+                var curPass = $('#chgp_current_pass');
+                var nPass = $('#chgp_new_pass');
+                var cPass = $('#chgp_confirm_pass');
+
+                if (curPass.val() == '') {
+                    showMsg('Empty Current Pass');
+                } else if (nPass.val() == '') {
+                    showMsg('Empty New Pass');
+                } else if (cPass.val() == '') {
+                    showMsg('Empty Confirm Pass');
+                } else {
+                    if (nPass.val() != cPass.val()) {
+                        showMsg('Password not match');
+                    } else {
+                        var usrInfoID = $('#hdmfxyxsf').val();
+                        updatePassword(usrInfoID, nPass, curPass);
+                        
+                        
+                    }
+                    
+                }
+            });
+
+            function updatePassword(el1,el2,el3) { //ajax to webmethod call for updating password.
+                var usrPass = $(el2).val();
+                var usrOldPass = $(el3).val();
+                var cPass = $('#chgp_confirm_pass');
+                $.ajax({
+                    url: '/Toolkit/webMethod.asmx/updatePassword',
+                    method: 'post',
+                    contentType: 'application/json',
+                    data: '{UsrName : "' + el1 + '", newPass : "' + usrPass + '" , oldPass : "' + usrOldPass + '"}',
+                    dataType: 'json',
+                    success: function (sRes) {
+                        if (sRes.d == 'Password Updated') {
+                            showMsg(sRes.d);
+                            cPass.val('');
+                            $(el2).val('');
+                            $(el3).val('');
+                            $('#modal_changePass').modal('hide');
+                        } else {
+                            showMsg(sRes.d);
+                        }
+                    },
+                    error: function (err) {
+                        showMsg(err);
+                    }
+                });
+            }
+
+            //SENDS THE CONCERN
+
+            $('#sendEmail').on('click', function () {
+                emailConcern(concernDtls);
+            });
+
+            function emailConcern(el) {
+                 usrEmail
+                var concernBody = $(el).val();
+                var fullName = $('#usrFullName').val();
+                var emailAddress = $('#usrEmail').val();
+                var msgBody = 'FROM: <h4> ' + fullName + ' <small> ' + emailAddress + ' </small></h4><br />' + concernBody
+
+                $.ajax({
+                    url: '/Toolkit/webMethod.asmx/emailConcer',
+                    method: 'post',
+                    contentType: 'application/json',
+                    data: '{ details: "' + msgBody + '" }',
+                    dataType: 'json',
+                    success: function (result) {
+                        showMsg(result.d);
+                        $(el).val('');
+                        $('#modal_concern').modal('hide');
+                    },
+                    error: function (err) {
+                        showMsg(err);
+                    }
+                });
+
+            }
+
+            //END SEND CONCERN
+        });
+    </script>
+    <script type="text/javascript">
+        $BODY = $('body'),
+        $MENU_TOGGLE = $('#menu_toggle'),
+        $SIDEBAR_MENU = $('#sidebar-menu'),
+        $SIDEBAR_FOOTER = $('.sidebar-footer'),
+        $LEFT_COL = $('.left_col'),
+        $RIGHT_COL = $('.right_col'),
+        $NAV_MENU = $('.nav_menu'),
+        $FOOTER = $('footer');
+
+        var setContentHeight = function () {
+            // reset height
+            $RIGHT_COL.css('min-height', $(window).height());
+
+            var bodyHeight = $BODY.outerHeight(),
+                footerHeight = $BODY.hasClass('footer_fixed') ? 0 : $FOOTER.height(),
+                leftColHeight = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
+                contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
+
+            // normalize content
+            contentHeight -= $NAV_MENU.height() + footerHeight;
+
+            $RIGHT_COL.css('min-height', contentHeight);
+        };
+
+        $(document).on('click', '.header', function (ev) {
+            var $li = $(this).parent();
+
+            if ($li.is('.active')) {
+                $li.removeClass('active active-sm');
+                $('ul:first', $li).slideUp(function () {
+                    setContentHeight();
+                });
+            } else {
+                // prevent closing menu if we are on child menu
+                if (!$li.parent().is('.child_menu')) {
+                    $('#sidebar-menu').find('li').removeClass('active active-sm');
+                    $('#sidebar-menu').find('li ul').slideUp();
+                }
+
+                $li.addClass('active');
+
+                $('ul:first', $li).slideDown(function () {
+                    setContentHeight();
+                });
+            }
+        });
+
+        $(document).on('click', '.viewReports', function () {
+            var reptype = $(this).attr('id');
+            $('#setSessionVarHere').val(reptype);
+        });
+    </script> 
+    <asp:ContentPlaceHolder ID="script" runat="server">
+
+    </asp:ContentPlaceHolder>
+</body>
+</html>

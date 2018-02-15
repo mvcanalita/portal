@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.5" name="jdaportal">
+  <DataContextMoniker Name="/jdaportalDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ccccb8e1-b155-44df-b809-c000f7881d7c" absoluteBounds="7.125, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/jdaportalDataContext/tblServerNotificationV1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c6e4a90-ad52-49a6-9402-ada40cbd8ecc" absoluteBounds="7.14, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97805d1d-2625-4ae6-b041-8e8ec6561435" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/jdaportalDataContext/tblDepartment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcf9f912-1179-41c4-bd8c-b431483bd465" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee11dead-e176-48dc-be38-a2eebd3d603e" absoluteBounds="3.75, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/jdaportalDataContext/tblUsrInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d426342f-bcd9-4edf-bfa9-76ab3372535c" absoluteBounds="3.765, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b9603abb-8b87-4924-af4a-7152cb542567" absoluteBounds="0.75, 5.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/jdaportalDataContext/tblServerNotificationV11" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8dfe13c-9224-42f2-82ee-78f8e92e68a1" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00c30337-565e-43e8-a8cb-c970c8bef593" absoluteBounds="3.75, 5.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/jdaportalDataContext/tblSystemSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f3a7476-f27e-40cc-b25e-11a3a37ebd24" absoluteBounds="3.765, 6.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97fc11e3-c3c6-4be4-a792-45998831e659" absoluteBounds="6.75, 3.75, 2, 2.347801106770834">
+      <DataClassMoniker Name="/jdaportalDataContext/tblUsrAccess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83673cad-cdf7-4466-a602-5393d7d962fe" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d6f471e-d6b8-43ca-b20a-06f2e8bec81f" absoluteBounds="6.75, 7.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/jdaportalDataContext/tblUsrDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07677eef-3c44-46be-840a-040fde522348" absoluteBounds="6.765, 8.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04080118-38c0-495e-b790-f3f89b7c7bbd" absoluteBounds="0.75, 8.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/jdaportalDataContext/tblUsrGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb083d0b-ac36-4ae2-8dcb-d1d3bc5ce08f" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

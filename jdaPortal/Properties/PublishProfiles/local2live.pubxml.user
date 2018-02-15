@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhpaJuj1zjUW0l3l/EzYmdQAAAAACAAAAAAAQZgAAAAEAACAAAAAH3ucPdgBIGNib1GPfA+iJ/dZtaq06W5vcbbFZinWDaAAAAAAOgAAAAAIAACAAAAA+sZF1Il7PAWIAZy1b06VwZytme3g3crrKUUhwJdsTeCAAAADYhOx9JmhYMb4+vX4oJo5qDG2E17O9Vi4AWIjAy7Ie50AAAAB9T2s6h5exPJjNzOB8zouQfZHs8E6n3CL9rv40ek9KOiO6SuJ7fotJ0tF/cbxxSxuxpNYAVhgyJJ1/Om02zXbh</EncryptedPassword>
+    <_PublishTargetUrl>ftp://192.168.10.155:21</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>01/24/2013 08:49:22</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>01/05/2017 14:26:56</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>01/05/2017 14:26:56</publishTime>
+    </File>
+    <File Include="bin/jdaPortal.dll">
+      <publishTime>01/05/2017 14:18:30</publishTime>
+    </File>
+    <File Include="bin/jdaPortal.pdb">
+      <publishTime>01/05/2017 14:18:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>12/07/2016 11:50:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>12/07/2016 11:50:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>12/07/2016 11:50:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>12/07/2016 11:50:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>12/07/2016 11:50:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/07/2016 11:53:06</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/07/2016 11:50:46</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>12/07/2016 11:50:46</publishTime>
+    </File>
+    <File Include="Data/jdaportal.dbml">
+      <publishTime>01/04/2017 14:57:32</publishTime>
+    </File>
+    <File Include="Data/MenuHandler.ashx">
+      <publishTime>11/24/2016 14:03:24</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>01/04/2017 15:14:12</publishTime>
+    </File>
+    <File Include="ErrorPage.aspx">
+      <publishTime>06/24/2016 14:08:09</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/css/bootstrap-theme.css">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/css/bootstrap-wizard.css">
+      <publishTime>11/12/2016 17:37:34</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/css/bootstrap.css">
+      <publishTime>11/11/2016 15:09:32</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/js/bootstrap-wizard.js">
+      <publishTime>11/14/2016 15:03:25</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/js/bootstrap-wizard.min.js">
+      <publishTime>11/12/2016 13:18:46</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/js/bootstrap.js">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/js/bootstrap.min.js">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/bootstrap/js/npm.js">
+      <publishTime>06/15/2016 14:46:18</publishTime>
+    </File>
+    <File Include="Framework/fonts/CaviarRegular/CaviarDreams-demo.html">
+      <publishTime>11/11/2016 13:42:55</publishTime>
+    </File>
+    <File Include="Framework/fonts/CaviarRegular/CaviarDreams-webfont.eot">
+      <publishTime>11/11/2016 13:42:55</publishTime>
+    </File>
+    <File Include="Framework/fonts/CaviarRegular/CaviarDreams-webfont.svg">
+      <publishTime>11/11/2016 13:42:55</publishTime>
+    </File>
+    <File Include="Framework/fonts/CaviarRegular/CaviarDreams-webfont.ttf">
+      <publishTime>11/11/2016 13:42:55</publishTime>
+    </File>
+    <File Include="Framework/fonts/CaviarRegular/CaviarDreams-webfont.woff">
+      <publishTime>11/11/2016 13:42:55</publishTime>
+    </File>
+    <File Include="Framework/fonts/lobsterRegular/lobster-regular-webfont.woff">
+      <publishTime>11/11/2016 14:06:13</publishTime>
+    </File>
+    <File Include="Framework/fonts/lobsterRegular/lobster-regular-webfont.woff2">
+      <publishTime>11/11/2016 14:06:13</publishTime>
+    </File>
+    <File Include="Framework/fonts/lobsterRegular/lobster-regular.ttf">
+      <publishTime>11/11/2016 14:06:13</publishTime>
+    </File>
+    <File Include="Framework/gc-scrollbar.css">
+      <publishTime>11/12/2016 16:05:27</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/css/bootstrap.css">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/css/custom.css">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/css/font-awesome.css">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/css/switchery.css">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/4.4.0/index.html">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/fontawesome-webfont.eot">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/fontawesome-webfont.svg">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/fontawesome-webfont.ttf">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/fontawesome-webfont.woff">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/fontawesome-webfont.woff2">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/FontAwesome.otf">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/js/bootstrap.js">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/js/custom.js">
+      <publishTime>11/24/2016 14:07:13</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/js/jquery.js">
+      <publishTime>11/24/2016 14:07:14</publishTime>
+    </File>
+    <File Include="Framework/Gentellela/js/switchery.js">
+      <publishTime>11/24/2016 14:07:14</publishTime>
+    </File>
+    <File Include="Framework/jquery-2.2.1.min.js">
+      <publishTime>06/17/2016 10:26:31</publishTime>
+    </File>
+    <File Include="Framework/labelauty/images/input-checked.png">
+      <publishTime>11/15/2016 13:11:47</publishTime>
+    </File>
+    <File Include="Framework/labelauty/images/input-unchecked.png">
+      <publishTime>11/15/2016 13:11:47</publishTime>
+    </File>
+    <File Include="Framework/labelauty/jquery-labelauty.css">
+      <publishTime>11/15/2016 14:48:50</publishTime>
+    </File>
+    <File Include="Framework/labelauty/jquery-labelauty.js">
+      <publishTime>11/15/2016 14:25:11</publishTime>
+    </File>
+    <File Include="Framework/simple-sidebar.css">
+      <publishTime>11/24/2016 14:42:56</publishTime>
+    </File>
+    <File Include="Framework/smartWiz.css">
+      <publishTime>11/11/2016 18:06:56</publishTime>
+    </File>
+    <File Include="Framework/styleMain.css">
+      <publishTime>11/24/2016 15:24:08</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/25/2016 10:46:43</publishTime>
+    </File>
+    <File Include="img/avatar/FeMale-1.jpg">
+      <publishTime>11/24/2016 13:59:20</publishTime>
+    </File>
+    <File Include="img/avatar/feMale-2.jpg">
+      <publishTime>11/24/2016 13:59:20</publishTime>
+    </File>
+    <File Include="img/avatar/feMale-3.jpg">
+      <publishTime>11/24/2016 13:59:20</publishTime>
+    </File>
+    <File Include="img/avatar/Male-1.jpg">
+      <publishTime>11/24/2016 13:59:20</publishTime>
+    </File>
+    <File Include="img/avatar/Male-2.jpg">
+      <publishTime>11/24/2016 13:59:20</publishTime>
+    </File>
+    <File Include="img/avatar/Male-3.jpg">
+      <publishTime>11/24/2016 13:59:20</publishTime>
+    </File>
+    <File Include="img/b.jpg">
+      <publishTime>08/18/2016 18:03:49</publishTime>
+    </File>
+    <File Include="img/bg63.gif">
+      <publishTime>06/24/2016 13:41:26</publishTime>
+    </File>
+    <File Include="img/blue.png">
+      <publishTime>06/17/2016 10:52:38</publishTime>
+    </File>
+    <File Include="img/BodyBg.jpg">
+      <publishTime>11/24/2016 14:55:58</publishTime>
+    </File>
+    <File Include="img/bodyBG.png">
+      <publishTime>11/24/2016 14:55:09</publishTime>
+    </File>
+    <File Include="img/cropped.jpg">
+      <publishTime>12/09/2016 10:03:13</publishTime>
+    </File>
+    <File Include="img/gray.png">
+      <publishTime>06/17/2016 10:52:38</publishTime>
+    </File>
+    <File Include="img/iLoading.gif">
+      <publishTime>06/30/2016 11:51:22</publishTime>
+    </File>
+    <File Include="img/invmaleuser.png">
+      <publishTime>08/18/2016 18:03:49</publishTime>
+    </File>
+    <File Include="img/loading_cart.gif">
+      <publishTime>06/30/2016 11:45:49</publishTime>
+    </File>
+    <File Include="img/maleuser.png">
+      <publishTime>06/23/2016 17:33:02</publishTime>
+    </File>
+    <File Include="img/orange.jpg">
+      <publishTime>06/17/2016 10:56:55</publishTime>
+    </File>
+    <File Include="img/pattern.jpg">
+      <publishTime>06/23/2016 13:31:20</publishTime>
+    </File>
+    <File Include="img/pattern.png">
+      <publishTime>06/23/2016 13:34:16</publishTime>
+    </File>
+    <File Include="img/person187.png">
+      <publishTime>06/23/2016 17:32:08</publishTime>
+    </File>
+    <File Include="img/pink.jpg">
+      <publishTime>06/17/2016 10:56:55</publishTime>
+    </File>
+    <File Include="img/techNoBottomLeft.png">
+      <publishTime>06/30/2016 14:28:26</publishTime>
+    </File>
+    <File Include="img/tile.jpg">
+      <publishTime>06/30/2016 14:04:06</publishTime>
+    </File>
+    <File Include="img/wizard.jpg">
+      <publishTime>11/14/2016 13:45:24</publishTime>
+    </File>
+    <File Include="Libraries/bootpaging.css">
+      <publishTime>12/06/2016 16:41:21</publishTime>
+    </File>
+    <File Include="Libraries/bs.pagination.js">
+      <publishTime>12/06/2016 16:41:21</publishTime>
+    </File>
+    <File Include="Libraries/gc-scrollbar.css">
+      <publishTime>10/03/2016 14:00:35</publishTime>
+    </File>
+    <File Include="Libraries/jquery-3.1.0.js">
+      <publishTime>10/03/2016 11:01:17</publishTime>
+    </File>
+    <File Include="Libraries/materialize/css/materialize.css">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/css/materialize.min.css">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Bold.eot">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Bold.ttf">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Bold.woff">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Bold.woff2">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Light.eot">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Light.ttf">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Light.woff">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Light.woff2">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Medium.eot">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Medium.ttf">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Medium.woff">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Medium.woff2">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Regular.eot">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Regular.ttf">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Regular.woff">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Regular.woff2">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Thin.eot">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Thin.ttf">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Thin.woff">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/fonts/roboto/Roboto-Thin.woff2">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/js/materialize.js">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/materialize/js/materialize.min.js">
+      <publishTime>12/20/2016 11:46:37</publishTime>
+    </File>
+    <File Include="Libraries/RegisterScript.js">
+      <publishTime>11/11/2016 17:45:39</publishTime>
+    </File>
+    <File Include="Libraries/script.js">
+      <publishTime>07/25/2016 08:29:27</publishTime>
+    </File>
+    <File Include="Libraries/Toast/Toast.css">
+      <publishTime>12/05/2016 14:24:27</publishTime>
+    </File>
+    <File Include="Libraries/Toast/Toast.js">
+      <publishTime>12/05/2016 14:12:30</publishTime>
+    </File>
+    <File Include="Libraries/toastr.min.js">
+      <publishTime>10/27/2016 11:39:54</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>01/05/2017 13:32:39</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/07/2016 11:53:06</publishTime>
+    </File>
+    <File Include="Pages/DataPage.aspx">
+      <publishTime>01/03/2017 10:43:28</publishTime>
+    </File>
+    <File Include="Pages/Home.aspx">
+      <publishTime>06/29/2016 19:24:03</publishTime>
+    </File>
+    <File Include="Pages/indetJDAreports.aspx">
+      <publishTime>11/27/2016 13:42:01</publishTime>
+    </File>
+    <File Include="Pages/NotAllowed.aspx">
+      <publishTime>10/22/2016 15:05:06</publishTime>
+    </File>
+    <File Include="Pages/PdfPage.aspx">
+      <publishTime>09/29/2016 16:02:53</publishTime>
+    </File>
+    <File Include="page_403.aspx">
+      <publishTime>10/25/2016 11:47:45</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>01/05/2017 14:26:55</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.6.4.js">
+      <publishTime>12/07/2016 11:51:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.6.4.min.js">
+      <publishTime>12/07/2016 11:51:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.1.js">
+      <publishTime>12/07/2016 11:51:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.1.min.js">
+      <publishTime>12/07/2016 11:51:09</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>01/04/2017 15:32:20</publishTime>
+    </File>
+    <File Include="Toolkit/webMethod.asmx">
+      <publishTime>11/10/2016 13:45:38</publishTime>
+    </File>
+    <File Include="Uploads/img/000875/profile.jpg">
+      <publishTime>12/27/2016 16:29:23</publishTime>
+    </File>
+    <File Include="User/AdminPage.aspx">
+      <publishTime>12/28/2016 15:19:02</publishTime>
+    </File>
+    <File Include="User/AdminPane.aspx">
+      <publishTime>12/19/2016 15:05:00</publishTime>
+    </File>
+    <File Include="User/Logout.aspx">
+      <publishTime>06/20/2016 14:08:20</publishTime>
+    </File>
+    <File Include="User/Profile.aspx">
+      <publishTime>12/05/2016 14:27:34</publishTime>
+    </File>
+    <File Include="User/test.asmx">
+      <publishTime>11/05/2016 17:31:45</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/05/2017 14:19:23</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jdaportal" Class="jdaportalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=jdaportal;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="jdaportalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblServerNotificationV1" Member="tblServerNotificationV1s">
+    <Type Name="tblServerNotificationV1">
+      <Column Name="notifyID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="notifyBody" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="notifyUpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="notifyQuote" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="notifyUserName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDepartment" Member="tblDepartments">
+    <Type Name="tblDepartment">
+      <Column Name="DepID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DepName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DepCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUsrInfo" Member="tblUsrInfos">
+    <Type Name="tblUsrInfo">
+      <Column Name="UsrInfoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UsrName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrPass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrIsLog" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsrStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsrLastLog" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UsrLoginAttempt" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UsrGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsrModuleAccess" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblServerNotificationV1" Member="tblServerNotificationV11s">
+    <Type Name="tblServerNotificationV11">
+      <Column Name="notifyID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="notifyBody" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="notifyUpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="notifyQuote" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="notifyUserName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSystemSettings" Member="tblSystemSettings">
+    <Type Name="tblSystemSetting">
+      <Column Name="sysid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sysCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sysName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sysValue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sysText" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sysStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUsrAccess" Member="tblUsrAccesses">
+    <Type Name="tblUsrAccess">
+      <Column Name="UsrAccessID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UsrAccessCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAccessDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrAccessCreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAccessCreatedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAccessUpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsrAccessUpdatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UsrAccessStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUsrDetails" Member="tblUsrDetails">
+    <Type Name="tblUsrDetail">
+      <Column Name="UsrDetailsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UsrInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrFName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrLName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrMName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrDepartment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrPosition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrEmpCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UsrAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UsrSection" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUsrGroup" Member="tblUsrGroups">
+    <Type Name="tblUsrGroup">
+      <Column Name="UsrGroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UsrGroupName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrGroupCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UsrGroupStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsrGroupCreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrGroupCreatedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UsrGroupUpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsrGroupUpdatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UsrAccessIDs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetServNotify" Method="GetServNotify">
+    <Parameter Name="NotifyDate" Parameter="notifyDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="isLatest" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetServNotifyResult">
+      <Column Name="notifyID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="notifyBody" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="notifyUpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="notifyQuote" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="notifyUserName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_wizardRegister" Method="proc_wizardRegister" IsComposable="true">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Userpass" Parameter="userpass" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="EmployeeCode" Parameter="employeeCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EmpEAdd" Parameter="empEAdd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UsrGender" Parameter="usrGender" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="motto" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="UsrNN" Parameter="usrNN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="recQuestionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="recAnswer" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.proc_ActivateUser" Method="proc_ActivateUser">
+    <Parameter Name="Usrname" Parameter="usrname" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="proc_ActivateUserResult">
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="System_Message" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_checkifExist" Method="proc_checkifExist">
+    <Parameter Name="empCode" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="proc_checkifExistResult">
+      <Column Name="result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_displayAccessModules" Method="proc_displayAccessModules">
+    <ElementType Name="proc_displayAccessModulesResult">
+      <Column Name="UsrAccessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAccessCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAccessDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_displayUsrAccess" Method="proc_displayUsrAccess">
+    <Parameter Name="UsrID" Parameter="usrID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsInverse" Parameter="isInverse" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="proc_displayUsrAccessResult">
+      <Column Name="UsrAccessCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAccessDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrAccessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_emailNotify" Method="proc_emailNotify">
+    <Parameter Name="msgDetails" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="msgRecepient" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="msgType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgProfile" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="proc_emailNotifyResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_GetDepartment" Method="proc_GetDepartment">
+    <Parameter Name="DepName" Parameter="depName" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="proc_GetDepartmentResult">
+      <Column Name="DepID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DepName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DepCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_getMenuData" Method="proc_getMenuData">
+    <ElementType Name="proc_getMenuDataResult">
+      <Column Name="menuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="menuDescription" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="menuParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="menuLinkAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="reportFileName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="reportType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_GetSystemSettings" Method="proc_GetSystemSettings">
+    <ElementType Name="proc_GetSystemSettingsResult">
+      <Column Name="sysCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sysName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sysValue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sysText" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_GetUserGroup" Method="proc_GetUserGroup">
+    <Parameter Name="UsrGroupCode" Parameter="usrGroupCode" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="proc_GetUserGroupResult">
+      <Column Name="UsrGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrGroupName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrGroupCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_GetUsrAccess" Method="proc_GetUsrAccess">
+    <Parameter Name="AccessID" Parameter="accessID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_GetUsrAccessResult">
+      <Column Name="UsrAccessCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrAccessDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_GetUsrDetails" Method="proc_GetUsrDetails">
+    <Parameter Name="UsrInfoID" Parameter="usrInfoID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_GetUsrDetailsResult">
+      <Column Name="UsrInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrPass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrIsLog" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsrStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsrLastLog" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UsrGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsrModuleAccess" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="photoLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UsrEmpCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UsrFName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrMName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrLName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrNickName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="UsrPosition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrSection" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UsrAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UsrEAdd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DepName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrActive" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_InsertAccRecDetails" Method="proc_InsertAccRecDetails">
+    <Parameter Name="userinfoId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="recQuestionId" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="recAnswer" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="result" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.proc_insertMenuData" Method="proc_insertMenuData">
+    <Parameter Name="menuDescription" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="menuParentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="menuLinkAddress" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="reportFileName" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="reportType" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.proc_InsertUser" Method="proc_InsertUser">
+    <Parameter Name="usrID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UsrGroupID" Parameter="usrGroupID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EmployeeCode" Parameter="employeeCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EmpEAdd" Parameter="empEAdd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UsrGender" Parameter="usrGender" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="motto" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="proc_InsertUserResult">
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_InsertUserDetails" Method="proc_InsertUserDetails">
+    <Parameter Name="UsrInfoID" Parameter="usrInfoID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EmployeeCode" Parameter="employeeCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EmpEAdd" Parameter="empEAdd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UsrGender" Parameter="usrGender" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="motto" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="UsrNN" Parameter="usrNN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="result" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.proc_listAllUsers" Method="proc_listAllUsers">
+    <Parameter Name="uname" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="proc_listAllUsersResult">
+      <Column Name="UsrName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrPass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Logged" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrFName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrMName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrLName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrPosition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DepName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsrGroupName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrGroupName1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UsrLastLog" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_LogOut" Method="proc_LogOut">
+    <Parameter Name="usrID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_LogOutResult">
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_recoverPassword" Method="proc_recoverPassword">
+    <Parameter Name="UsrInfoID" Parameter="usrInfoID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReturnCode" Parameter="returnCode" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.proc_recoverValidation" Method="proc_recoverValidation">
+    <Parameter Name="UsrName" Parameter="usrName" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="UsrAnswer" Parameter="usrAnswer" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UsrQuestionID" Parameter="usrQuestionID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_recoverValidationResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_searchUsr" Method="proc_searchUsr">
+    <Parameter Name="Parameter" Parameter="parameter" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="proc_searchUsrResult">
+      <Column Name="UsrInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UsrName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrPass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UsrIsLog" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsrStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsrLastLog" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UsrGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsrModuleAccess" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UsrEmpCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UsrFName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrMName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrLName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrPosition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrSection" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UsrAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UsrEAdd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DepName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsrGroupName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usrActive" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_updatePassword" Method="proc_updatePassword">
+    <Parameter Name="UsrName" Parameter="usrName" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="UsrOldPass" Parameter="usrOldPass" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="UsrPass" Parameter="usrPass" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="proc_updatePasswordResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_updateUAccessMod" Method="proc_updateUAccessMod">
+    <Parameter Name="UsrId" Parameter="usrId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NewUserAccess" Parameter="newUserAccess" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="proc_updateUAccessModResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_updateUserDtls" Method="proc_updateUserDtls">
+    <Parameter Name="usrinfoID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="updatedBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usrname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="usrempcode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="usrpass" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="usrFname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="usrMname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="usrLname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Designation" Parameter="designation" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="usremail" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="site" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="deptID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usrStat" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="usrislog" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="isAdmin" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="proc_updateUserDtlsResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_UpdateUserGroup" Method="proc_UpdateUserGroup">
+    <Parameter Name="UsrInfoID" Parameter="usrInfoID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OldUsrGroup" Parameter="oldUsrGroup" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NewUsrGroup" Parameter="newUsrGroup" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_UpdateUserGroupResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[Request Result]" Member="Request_Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_UserLogIn" Method="proc_UserLogIn">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="proc_UserLogInResult">
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_UsrAccessMods" Method="proc_UsrAccessMods">
+    <Parameter Name="uname" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="proc_UsrAccessModsResult">
+      <Column Name="UsrAccessCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_validateRegister" Method="proc_validateRegister">
+    <Parameter Name="EmpCode" Parameter="empCode" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="proc_validateRegisterResult">
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.setServNotif" Method="setServNotif">
+    <Parameter Name="NotifBody" Parameter="notifBody" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Quote" Parameter="quote" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Usrname" Parameter="usrname" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="setServNotifResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.func_checkUserAvailability" Method="func_checkUserAvailability" IsComposable="true">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.SplitString" Method="SplitString" IsComposable="true">
+    <Parameter Name="Input" Parameter="input" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Character" Parameter="character" Type="System.Char" DbType="Char(1)" />
+    <ElementType Name="SplitStringResult">
+      <Column Name="Item" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.func_getAccessModsV2" Method="func_getAccessModsV2" IsComposable="true">
+    <Parameter Name="ModCode" Parameter="modCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="returnWhat" Type="System.Int32" DbType="Int" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.func_getHrisDetails" Method="func_getHrisDetails" IsComposable="true">
+    <Parameter Name="EmployeeNo" Parameter="employeeNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DetailInitials" Parameter="detailInitials" Type="System.String" DbType="VarChar(2)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.ProperCase" Method="ProperCase" IsComposable="true">
+    <Parameter Name="Text" Parameter="text" Type="System.String" DbType="VarChar(8000)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.proc_InsertUserInfo" Method="proc_InsertUserInfo">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Userpass" Parameter="userpass" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="HRISid" Parameter="hRISid" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="result" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="proc_InsertUserInfoResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_InsertWizardRegister" Method="proc_InsertWizardRegister">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Userpass" Parameter="userpass" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="EmployeeCode" Parameter="employeeCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EmpEAdd" Parameter="empEAdd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="UsrGender" Parameter="usrGender" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="motto" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="UsrNN" Parameter="usrNN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="recQuestionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="recAnswer" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="proc_InsertWizardRegisterResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_getMenuDataParameter" Method="proc_getMenuDataParameter">
+    <Parameter Name="UsrInfoID" Parameter="usrInfoID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_getMenuDataParameterResult">
+      <Column Name="menuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="menuDescription" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="menuParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="menuLinkAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="reportFileName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="reportType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

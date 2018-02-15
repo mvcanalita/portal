@@ -1,0 +1,90 @@
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\jdaPortal-Test Site\jdaPortal\bin\jdaPortal.dll.config
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\jdaPortal-Test Site\jdaPortal\bin\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\jdaPortal-Test Site\jdaPortal\bin\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\jdaPortal-Test Site\jdaPortal\obj\Debug\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\jdaPortal-Test Site\jdaPortal\obj\Debug\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site\jdaPortal\bin\jdaPortal.dll.config
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site\jdaPortal\bin\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site\jdaPortal\bin\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site\jdaPortal\obj\Debug\jdaPortal.csprojResolveAssemblyReference.cache
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site\jdaPortal\obj\Debug\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site\jdaPortal\obj\Debug\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll.config
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Owin.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.xml
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.xml
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.xml
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\currentJDA-PORTAL\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.csprojResolveAssemblyReference.cache
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll.config
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\jdaPortal.pdb
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Web.Infrastructure.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Owin.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.xml
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.xml
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.xml
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.dll
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.pdb
+D:\Shared\experimental\a\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.csprojResolveAssemblyReference.cache
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll.config
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Owin.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.xml
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.xml
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.xml
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\a\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll.config
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\jdaPortal.pdb
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Owin.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.xml
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Microsoft.Owin.Security.xml
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\bin\Newtonsoft.Json.xml
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.csprojResolveAssemblyReference.cache
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.dll
+C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.pdb

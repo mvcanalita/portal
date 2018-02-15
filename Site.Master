@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="jdaPortal.Site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal</title>
+    <link href="bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.6-dist/styleMain.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.6-dist/gc-scrollbar.css" rel="stylesheet" />
+    <style>
+        .syp {
+            padding:0;
+        }
+        .syp table > tbody > th, .syp table > tbody > td {
+            padding-left: 20px;
+        }
+
+        .ModalPopupBG
+        {
+            background-color: #666699;
+            filter: alpha(opacity=50);
+            opacity: 0.7;
+        }
+
+        .HellowWorldPopup
+        {
+            min-width:500px;
+            min-height:150px;
+            background:white;
+        }
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="<% ResolveUrl("~/pdfList.aspx"); %>">JDA Portal</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-link"> Profile </span><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <asp:LinkButton ID="lnkPopup" runat="server">Change User</asp:LinkButton>
+                    </li>
+                    <li><a href="#">Email Concern</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <asp:LinkButton ID="lnkLogOut" runat="server" OnClick="logOut">Logout</asp:LinkButton>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        
+
+    <%--scripts--%>
+    <script src="<%= ResolveUrl("bootstrap-3.3.6-dist/jquery-2.2.1.min.js") %>"></script>
+    <script src="<%= ResolveUrl("bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/js/bootstrap.js") %>"></script>
+    
+    <script type="text/javascript">
+        function pageLoad() {
+            ShowPopup();
+            setTimeout(HidePopup, 2000);
+        }
+
+        function ShowPopup() {
+            $find('modalpopup').show();
+            //$get('Button1').click();
+        }
+
+        function HidePopup() {
+            $find('modalpopup').hide();
+            //$get('btnCancel').click();
+        }
+    </script>
+    </div>
+    </form>
+</body>
+</html>
