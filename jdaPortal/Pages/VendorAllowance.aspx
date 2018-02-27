@@ -144,6 +144,8 @@
                                         <input type="text" name="vendor" id="vendor" class="form-control" />
                                     </div>
                                 </div>
+                                <br />
+                                <br />
                                 <div class="form-group" style="text-align: right;">
                                     <label for="dept" class="col-sm-4 horizontal-alignment-center">Department</label>
                                     <div class="col-sm-8">

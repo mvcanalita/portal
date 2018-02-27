@@ -248,6 +248,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model\VendorAllowanceModel.cs" />
     <Compile Include="Pages\DataPage.aspx.cs">
       <DependentUpon>DataPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
