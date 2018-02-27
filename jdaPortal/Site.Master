@@ -416,8 +416,11 @@
                         li = $('<li><a class="header"></span><i class="' + iconClass + '"></i>' + accordionBtnText + '<span class="fa fa-chevron-down"></span></a></li>');
                     } else {
                         
-                        li = $('<li><a href="../Pages/DataPage.aspx?ReportName=' + this.reportFilename + '&ReportType=' + this.reportType + '" id="' + this.reportFilename + '" class="viewReports" >' + this.menuTxt + '</a></li>');
-                        
+                        if (this.reportFilename == 'CHKRUN') {
+                            li = $('<li><a href="http://192.168.10.173:8080/File%20Push%20Application%20Netsuite/files/getCheckFiles.php" target="_blank" id="' + this.reportFilename + '" class="viewReports" >' + this.menuTxt + '</a></li>');
+                        } else {
+                            li = $('<li><a href="' + this.menuLink + '?ReportName=' + this.reportFilename + '&ReportType=' + this.reportType + '" id="' + this.reportFilename + '" class="viewReports" >' + this.menuTxt + '</a></li>');
+                        }
                     }
                     if (!this.isActive) {
                         li.addClass('ui-state-disabled');

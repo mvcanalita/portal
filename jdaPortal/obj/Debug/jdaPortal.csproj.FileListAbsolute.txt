@@ -88,3 +88,23 @@ C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\j
 C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.csprojResolveAssemblyReference.cache
 C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.dll
 C:\Users\MIS\Desktop\Work on This\Latest Last Build source\Copy Site - SignalR\jdaPortal\obj\Debug\jdaPortal.pdb
+D:\devEnv\Portal\jdaPortal\bin\jdaPortal.dll.config
+D:\devEnv\Portal\jdaPortal\bin\jdaPortal.dll
+D:\devEnv\Portal\jdaPortal\bin\jdaPortal.pdb
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.Owin.dll
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.Owin.Security.dll
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.Web.Infrastructure.dll
+D:\devEnv\Portal\jdaPortal\bin\Newtonsoft.Json.dll
+D:\devEnv\Portal\jdaPortal\bin\Owin.dll
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.Owin.xml
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\devEnv\Portal\jdaPortal\bin\Microsoft.Owin.Security.xml
+D:\devEnv\Portal\jdaPortal\bin\Newtonsoft.Json.xml
+D:\devEnv\Portal\jdaPortal\obj\Debug\jdaPortal.csprojResolveAssemblyReference.cache
+D:\devEnv\Portal\jdaPortal\obj\Debug\jdaPortal.dll
+D:\devEnv\Portal\jdaPortal\obj\Debug\jdaPortal.pdb

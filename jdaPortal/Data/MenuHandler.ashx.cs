@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Script.Serialization;
 using System.Web.SessionState;
+using System.Configuration;
 
 namespace jdaPortal.Data
 {
@@ -20,7 +21,7 @@ namespace jdaPortal.Data
         public void ProcessRequest(HttpContext context)
         {
             List<Menu> menuList = new List<Menu>();
-            string cs = "Data Source=localhost;Initial Catalog=jdaportal;Persist Security Info=True;User ID=sa;Password=dataB@s3";
+            string cs = ConfigurationManager.ConnectionStrings["jdaportalConnectionString"].ToString();
             using(SqlConnection con=new SqlConnection(cs)){
                 SqlCommand cmd = new SqlCommand("proc_getMenuDataParameter ", con);
                 cmd.CommandType = CommandType.StoredProcedure;
