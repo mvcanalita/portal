@@ -20,9 +20,6 @@ namespace jdaPortal.Model
         public int? AllowanceNo { get; set; }
         public double? percentoff { get; set; }
         public string fromtoDate { get; set; }
-        public string? ApplyToCogs { get; set; }
-        public string? ApplyToNet { get; set; }
-        public string? StyleNo { get; set; }
 
     }
 }
