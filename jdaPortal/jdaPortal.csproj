@@ -166,6 +166,7 @@
     <Content Include="Pages\indetJDAreports.aspx" />
     <Content Include="Pages\NotAllowed.aspx" />
     <Content Include="Pages\PdfPage.aspx" />
+    <Content Include="Pages\VendorAllowance.aspx" />
     <Content Include="page_403.aspx" />
     <Content Include="Framework\fonts\CaviarRegular\CaviarDreams-webfont.eot" />
     <Content Include="Framework\fonts\CaviarRegular\CaviarDreams-webfont.ttf" />
@@ -288,6 +289,13 @@
     </Compile>
     <Compile Include="Pages\PdfPage.aspx.designer.cs">
       <DependentUpon>PdfPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VendorAllowance.aspx.cs">
+      <DependentUpon>VendorAllowance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\VendorAllowance.aspx.designer.cs">
+      <DependentUpon>VendorAllowance.aspx</DependentUpon>
     </Compile>
     <Compile Include="page_403.aspx.cs">
       <DependentUpon>page_403.aspx</DependentUpon>
