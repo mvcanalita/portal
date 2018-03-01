@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jdaportal" Class="jdaportalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=jdaportal;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="jdaportalConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jdalocal" Class="jdaportalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=jdalocal;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="jdaportalConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblServerNotificationV1" Member="tblServerNotificationV1s">
     <Type Name="tblServerNotificationV1">
       <Column Name="notifyID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -473,6 +473,41 @@
       <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="reportFileName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="reportType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_getVendorAllowance" Method="proc_getVendorAllowance">
+    <Parameter Name="vndr" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dept" Type="System.Int32" DbType="Int" />
+    <Parameter Name="suddpt" Type="System.Int32" DbType="Int" />
+    <Parameter Name="clss" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subClas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stylenum" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="sku" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_getVendorAllowanceResult">
+      <Column Name="Message" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_test" Method="proc_test">
+    <ElementType Name="proc_testResult">
+      <Column Name="ASNUM" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PADPT" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PASDP" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PACLS" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PASCL" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="INUMBR" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PASEQ" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PATYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="PAAMT" Type="System.Decimal" DbType="Decimal(13,4) NOT NULL" CanBeNull="false" />
+      <Column Name="PAPCT" Type="System.Decimal" DbType="Decimal(3,1) NOT NULL" CanBeNull="false" />
+      <Column Name="PADSC" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="PAFRCN" Type="System.Decimal" DbType="Decimal(1,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PAFRDT" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PATOCN" Type="System.Decimal" DbType="Decimal(1,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PATODT" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PACGYN" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ISTYLN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PANTYN" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PAALWN" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>

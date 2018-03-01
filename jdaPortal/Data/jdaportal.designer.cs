@@ -22,7 +22,7 @@ namespace jdaPortal.Data
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="jdaportal")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="jdalocal")]
 	public partial class jdaportalDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -428,6 +428,20 @@ namespace jdaPortal.Data
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usrInfoID);
 			return ((ISingleResult<proc_getMenuDataParameterResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proc_getVendorAllowance")]
+		public ISingleResult<proc_getVendorAllowanceResult> proc_getVendorAllowance([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> vndr, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dept, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> suddpt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> clss, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> subClas, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(25)")] string stylenum, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sku)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), vndr, dept, suddpt, clss, subClas, stylenum, sku);
+			return ((ISingleResult<proc_getVendorAllowanceResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proc_test")]
+		public ISingleResult<proc_testResult> proc_test()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<proc_testResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -4730,6 +4744,382 @@ namespace jdaPortal.Data
 				if ((this._reportType != value))
 				{
 					this._reportType = value;
+				}
+			}
+		}
+	}
+	
+	public partial class proc_getVendorAllowanceResult
+	{
+		
+		private string _Message;
+		
+		public proc_getVendorAllowanceResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Message", DbType="VarChar(150)")]
+		public string Message
+		{
+			get
+			{
+				return this._Message;
+			}
+			set
+			{
+				if ((this._Message != value))
+				{
+					this._Message = value;
+				}
+			}
+		}
+	}
+	
+	public partial class proc_testResult
+	{
+		
+		private decimal _ASNUM;
+		
+		private decimal _PADPT;
+		
+		private decimal _PASDP;
+		
+		private decimal _PACLS;
+		
+		private decimal _PASCL;
+		
+		private decimal _INUMBR;
+		
+		private decimal _PASEQ;
+		
+		private string _PATYPE;
+		
+		private decimal _PAAMT;
+		
+		private decimal _PAPCT;
+		
+		private string _PADSC;
+		
+		private decimal _PAFRCN;
+		
+		private decimal _PAFRDT;
+		
+		private decimal _PATOCN;
+		
+		private decimal _PATODT;
+		
+		private string _PACGYN;
+		
+		private string _ISTYLN;
+		
+		private string _PANTYN;
+		
+		private decimal _PAALWN;
+		
+		public proc_testResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ASNUM", DbType="Decimal(6,0) NOT NULL")]
+		public decimal ASNUM
+		{
+			get
+			{
+				return this._ASNUM;
+			}
+			set
+			{
+				if ((this._ASNUM != value))
+				{
+					this._ASNUM = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PADPT", DbType="Decimal(3,0) NOT NULL")]
+		public decimal PADPT
+		{
+			get
+			{
+				return this._PADPT;
+			}
+			set
+			{
+				if ((this._PADPT != value))
+				{
+					this._PADPT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASDP", DbType="Decimal(3,0) NOT NULL")]
+		public decimal PASDP
+		{
+			get
+			{
+				return this._PASDP;
+			}
+			set
+			{
+				if ((this._PASDP != value))
+				{
+					this._PASDP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PACLS", DbType="Decimal(3,0) NOT NULL")]
+		public decimal PACLS
+		{
+			get
+			{
+				return this._PACLS;
+			}
+			set
+			{
+				if ((this._PACLS != value))
+				{
+					this._PACLS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASCL", DbType="Decimal(3,0) NOT NULL")]
+		public decimal PASCL
+		{
+			get
+			{
+				return this._PASCL;
+			}
+			set
+			{
+				if ((this._PASCL != value))
+				{
+					this._PASCL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INUMBR", DbType="Decimal(9,0) NOT NULL")]
+		public decimal INUMBR
+		{
+			get
+			{
+				return this._INUMBR;
+			}
+			set
+			{
+				if ((this._INUMBR != value))
+				{
+					this._INUMBR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASEQ", DbType="Decimal(3,0) NOT NULL")]
+		public decimal PASEQ
+		{
+			get
+			{
+				return this._PASEQ;
+			}
+			set
+			{
+				if ((this._PASEQ != value))
+				{
+					this._PASEQ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PATYPE", DbType="VarChar(2) NOT NULL", CanBeNull=false)]
+		public string PATYPE
+		{
+			get
+			{
+				return this._PATYPE;
+			}
+			set
+			{
+				if ((this._PATYPE != value))
+				{
+					this._PATYPE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAAMT", DbType="Decimal(13,4) NOT NULL")]
+		public decimal PAAMT
+		{
+			get
+			{
+				return this._PAAMT;
+			}
+			set
+			{
+				if ((this._PAAMT != value))
+				{
+					this._PAAMT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAPCT", DbType="Decimal(3,1) NOT NULL")]
+		public decimal PAPCT
+		{
+			get
+			{
+				return this._PAPCT;
+			}
+			set
+			{
+				if ((this._PAPCT != value))
+				{
+					this._PAPCT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PADSC", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		public string PADSC
+		{
+			get
+			{
+				return this._PADSC;
+			}
+			set
+			{
+				if ((this._PADSC != value))
+				{
+					this._PADSC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAFRCN", DbType="Decimal(1,0) NOT NULL")]
+		public decimal PAFRCN
+		{
+			get
+			{
+				return this._PAFRCN;
+			}
+			set
+			{
+				if ((this._PAFRCN != value))
+				{
+					this._PAFRCN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAFRDT", DbType="Decimal(6,0) NOT NULL")]
+		public decimal PAFRDT
+		{
+			get
+			{
+				return this._PAFRDT;
+			}
+			set
+			{
+				if ((this._PAFRDT != value))
+				{
+					this._PAFRDT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PATOCN", DbType="Decimal(1,0) NOT NULL")]
+		public decimal PATOCN
+		{
+			get
+			{
+				return this._PATOCN;
+			}
+			set
+			{
+				if ((this._PATOCN != value))
+				{
+					this._PATOCN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PATODT", DbType="Decimal(6,0) NOT NULL")]
+		public decimal PATODT
+		{
+			get
+			{
+				return this._PATODT;
+			}
+			set
+			{
+				if ((this._PATODT != value))
+				{
+					this._PATODT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PACGYN", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string PACGYN
+		{
+			get
+			{
+				return this._PACGYN;
+			}
+			set
+			{
+				if ((this._PACGYN != value))
+				{
+					this._PACGYN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ISTYLN", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string ISTYLN
+		{
+			get
+			{
+				return this._ISTYLN;
+			}
+			set
+			{
+				if ((this._ISTYLN != value))
+				{
+					this._ISTYLN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PANTYN", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string PANTYN
+		{
+			get
+			{
+				return this._PANTYN;
+			}
+			set
+			{
+				if ((this._PANTYN != value))
+				{
+					this._PANTYN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAALWN", DbType="Decimal(7,0) NOT NULL")]
+		public decimal PAALWN
+		{
+			get
+			{
+				return this._PAALWN;
+			}
+			set
+			{
+				if ((this._PAALWN != value))
+				{
+					this._PAALWN = value;
 				}
 			}
 		}

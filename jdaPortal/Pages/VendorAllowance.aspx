@@ -28,6 +28,28 @@
                 </div>
                 <div class="x_content">
                     <a href="#" data-toggle="modal" data-target="#modal_show_details"><i class="fa fa-search"></i></a>
+
+                    <%-- Data Grid View --%>
+                    <asp:GridView ID="lstVndorAllowance"  runat="server" CssClass="table table-hover table-responsive" AutoGenerateColumns="False" 
+                        AllowPaging="True" GridLines="None"  HorizontalAlign="Center" PagerStyle-CssClass="pagination"  PageSize="10"
+                        DataKeyNames="ASNUM"
+                         EmptyDataText="No value or Null" ShowHeaderWhenEmpty="True" HeaderStyle-CssClass="no_hover">
+                        <Columns>
+                            <%--<asp:BoundField DataField="CategoryDesc" HeaderText="Description" ItemStyle-CssClass="text-elipse" ItemStyle-Width="400px" />--%>
+                            <asp:BoundField DataField="ASNUM" HeaderText="From" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton runat="server" ID="linkEdit" data-toggle="modal" data-target="#modal_show_details" CommandName="Edit" OnClientClick="return false" CssClass="table-option">
+                                        <span data-type="tooltip" data-tooltip="Edit" data-pos="right"><i class="material-icons">Select</i></span>
+                                    </asp:LinkButton>
+                                </ItemTemplate>
+                                <ItemStyle Width="50" />
+                            </asp:TemplateField>
+                        </Columns> 
+                        <PagerSettings FirstPageText="&lt;&lt;" LastPageText="&gt;&gt;" Mode="NumericFirstLast" />
+                        <PagerStyle CssClass="pagination pagination-lg" />
+                    </asp:GridView> <!-- end gridview -->
+                    <%-- Data Grid View --%>
                 </div>
             </div>
             <div class="modal fade" id="search_modal" tabindex="-1" role="dialog" aria-hidden="true">
