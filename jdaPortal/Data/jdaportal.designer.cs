@@ -430,18 +430,18 @@ namespace jdaPortal.Data
 			return ((ISingleResult<proc_getMenuDataParameterResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proc_getVendorAllowance")]
-		public ISingleResult<proc_getVendorAllowanceResult> proc_getVendorAllowance([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> vndr, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dept, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> suddpt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> clss, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> subClas, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(25)")] string stylenum, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sku)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), vndr, dept, suddpt, clss, subClas, stylenum, sku);
-			return ((ISingleResult<proc_getVendorAllowanceResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proc_test")]
 		public ISingleResult<proc_testResult> proc_test()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<proc_testResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proc_getVendorAllowanceV2")]
+		public ISingleResult<proc_getVendorAllowanceV2Result> proc_getVendorAllowanceV2([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> vndr, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dept, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> suddpt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> clss, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> subClas, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(25)")] string stylenum, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sku)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), vndr, dept, suddpt, clss, subClas, stylenum, sku);
+			return ((ISingleResult<proc_getVendorAllowanceV2Result>)(result.ReturnValue));
 		}
 	}
 	
@@ -4749,32 +4749,6 @@ namespace jdaPortal.Data
 		}
 	}
 	
-	public partial class proc_getVendorAllowanceResult
-	{
-		
-		private string _Message;
-		
-		public proc_getVendorAllowanceResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Message", DbType="VarChar(150)")]
-		public string Message
-		{
-			get
-			{
-				return this._Message;
-			}
-			set
-			{
-				if ((this._Message != value))
-				{
-					this._Message = value;
-				}
-			}
-		}
-	}
-	
 	public partial class proc_testResult
 	{
 		
@@ -5120,6 +5094,32 @@ namespace jdaPortal.Data
 				if ((this._PAALWN != value))
 				{
 					this._PAALWN = value;
+				}
+			}
+		}
+	}
+	
+	public partial class proc_getVendorAllowanceV2Result
+	{
+		
+		private string _Message;
+		
+		public proc_getVendorAllowanceV2Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Message", DbType="VarChar(150)")]
+		public string Message
+		{
+			get
+			{
+				return this._Message;
+			}
+			set
+			{
+				if ((this._Message != value))
+				{
+					this._Message = value;
 				}
 			}
 		}
