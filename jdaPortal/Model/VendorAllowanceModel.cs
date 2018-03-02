@@ -7,19 +7,22 @@ namespace jdaPortal.Model
 {
     public class VendorAllowanceModel
     {
-        public int vendorCode { get; set; }
-        public string vendorName { get; set; }
-        public int? depno { get; set; }
-        public int? subdepno { get; set; }
-        public int? iclassno { get; set; }
-        public int? isclassno { get; set; }
-        public string skuNumber { get; set; }
-        public string itemDesc { get; set; }
-        public string AllowanceType { get; set; }
-        public string AllowanceDesc { get; set; }
-        public int? AllowanceNo { get; set; }
-        public double? percentoff { get; set; }
-        public string fromtoDate { get; set; }
+        public int VENDOR { get; set; }
+        public string VENDOR_NAME { get; set; }
+        public int? DEPARTMENT { get; set; }
+        public int? SUB_DEPARTMENT { get; set; }
+        public int? CLASS { get; set; }
+        public int? SUB_CLASS { get; set; }
+        public string ITEM { get; set; }
+        public string ALLW_TYPE { get; set; }
+        public double? PRCNT_OFF { get; set; }
+        public string ALLW_DESC { get; set; }
+        public string DATE_FROM { get; set; }
+        public string DATE_TO { get; set; }
+        public bool? COGS { get; set; }
+        public bool? ALLW_NET { get; set; }
+        public string ITEM_STYLE { get; set; }
+        public int? ALLW_NUM { get; set; }
 
     }
 }

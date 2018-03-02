@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jdaportal" Class="jdaportalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=jdaportal;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="jdaportalConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jdalocal" Class="jdaportalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=jdalocal;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="jdaportalConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblServerNotificationV1" Member="tblServerNotificationV1s">
     <Type Name="tblServerNotificationV1">
       <Column Name="notifyID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -473,6 +473,34 @@
       <Column Name="isActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="reportFileName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="reportType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proc_getVendorAllowanceV2" Method="proc_getVendorAllowanceV2">
+    <Parameter Name="vndr" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dept" Type="System.Int32" DbType="Int" />
+    <Parameter Name="suddpt" Type="System.Int32" DbType="Int" />
+    <Parameter Name="clss" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subClas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stylenum" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="sku" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_getVendorAllowanceV2Result">
+      <Column Name="VENDOR" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="VENDOR_NAME" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="SUB_DEPARTMENT" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CLASS" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="SUB_CLASS" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEM" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEM_DESC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ALLW_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="PRCNT_OFF" Type="System.Decimal" DbType="Decimal(3,1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLW_DESC" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_FROM" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DATE_TO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="COGS" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ITEM_STYLE" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLW_NET" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLW_NUM" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>

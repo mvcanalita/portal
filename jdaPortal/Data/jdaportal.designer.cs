@@ -22,7 +22,7 @@ namespace jdaPortal.Data
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="jdaportal")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="jdalocal")]
 	public partial class jdaportalDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -428,6 +428,13 @@ namespace jdaPortal.Data
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usrInfoID);
 			return ((ISingleResult<proc_getMenuDataParameterResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proc_getVendorAllowanceV2")]
+		public ISingleResult<proc_getVendorAllowanceV2Result> proc_getVendorAllowanceV2([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> vndr, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dept, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> suddpt, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> clss, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> subClas, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(25)")] string stylenum, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sku)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), vndr, dept, suddpt, clss, subClas, stylenum, sku);
+			return ((ISingleResult<proc_getVendorAllowanceV2Result>)(result.ReturnValue));
 		}
 	}
 	
@@ -4730,6 +4737,320 @@ namespace jdaPortal.Data
 				if ((this._reportType != value))
 				{
 					this._reportType = value;
+				}
+			}
+		}
+	}
+	
+	public partial class proc_getVendorAllowanceV2Result
+	{
+		
+		private decimal _VENDOR;
+		
+		private string _VENDOR_NAME;
+		
+		private decimal _DEPARTMENT;
+		
+		private decimal _SUB_DEPARTMENT;
+		
+		private decimal _CLASS;
+		
+		private decimal _SUB_CLASS;
+		
+		private decimal _ITEM;
+		
+		private string _ITEM_DESC;
+		
+		private string _ALLW_TYPE;
+		
+		private decimal _PRCNT_OFF;
+		
+		private string _ALLW_DESC;
+		
+		private string _DATE_FROM;
+		
+		private string _DATE_TO;
+		
+		private string _COGS;
+		
+		private string _ITEM_STYLE;
+		
+		private string _ALLW_NET;
+		
+		private decimal _ALLW_NUM;
+		
+		public proc_getVendorAllowanceV2Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VENDOR", DbType="Decimal(6,0) NOT NULL")]
+		public decimal VENDOR
+		{
+			get
+			{
+				return this._VENDOR;
+			}
+			set
+			{
+				if ((this._VENDOR != value))
+				{
+					this._VENDOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VENDOR_NAME", DbType="VarChar(35)")]
+		public string VENDOR_NAME
+		{
+			get
+			{
+				return this._VENDOR_NAME;
+			}
+			set
+			{
+				if ((this._VENDOR_NAME != value))
+				{
+					this._VENDOR_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT", DbType="Decimal(3,0) NOT NULL")]
+		public decimal DEPARTMENT
+		{
+			get
+			{
+				return this._DEPARTMENT;
+			}
+			set
+			{
+				if ((this._DEPARTMENT != value))
+				{
+					this._DEPARTMENT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUB_DEPARTMENT", DbType="Decimal(3,0) NOT NULL")]
+		public decimal SUB_DEPARTMENT
+		{
+			get
+			{
+				return this._SUB_DEPARTMENT;
+			}
+			set
+			{
+				if ((this._SUB_DEPARTMENT != value))
+				{
+					this._SUB_DEPARTMENT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CLASS", DbType="Decimal(3,0) NOT NULL")]
+		public decimal CLASS
+		{
+			get
+			{
+				return this._CLASS;
+			}
+			set
+			{
+				if ((this._CLASS != value))
+				{
+					this._CLASS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUB_CLASS", DbType="Decimal(3,0) NOT NULL")]
+		public decimal SUB_CLASS
+		{
+			get
+			{
+				return this._SUB_CLASS;
+			}
+			set
+			{
+				if ((this._SUB_CLASS != value))
+				{
+					this._SUB_CLASS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ITEM", DbType="Decimal(9,0) NOT NULL")]
+		public decimal ITEM
+		{
+			get
+			{
+				return this._ITEM;
+			}
+			set
+			{
+				if ((this._ITEM != value))
+				{
+					this._ITEM = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ITEM_DESC", DbType="VarChar(30)")]
+		public string ITEM_DESC
+		{
+			get
+			{
+				return this._ITEM_DESC;
+			}
+			set
+			{
+				if ((this._ITEM_DESC != value))
+				{
+					this._ITEM_DESC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALLW_TYPE", DbType="VarChar(2) NOT NULL", CanBeNull=false)]
+		public string ALLW_TYPE
+		{
+			get
+			{
+				return this._ALLW_TYPE;
+			}
+			set
+			{
+				if ((this._ALLW_TYPE != value))
+				{
+					this._ALLW_TYPE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRCNT_OFF", DbType="Decimal(3,1) NOT NULL")]
+		public decimal PRCNT_OFF
+		{
+			get
+			{
+				return this._PRCNT_OFF;
+			}
+			set
+			{
+				if ((this._PRCNT_OFF != value))
+				{
+					this._PRCNT_OFF = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALLW_DESC", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		public string ALLW_DESC
+		{
+			get
+			{
+				return this._ALLW_DESC;
+			}
+			set
+			{
+				if ((this._ALLW_DESC != value))
+				{
+					this._ALLW_DESC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATE_FROM", DbType="VarChar(10)")]
+		public string DATE_FROM
+		{
+			get
+			{
+				return this._DATE_FROM;
+			}
+			set
+			{
+				if ((this._DATE_FROM != value))
+				{
+					this._DATE_FROM = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATE_TO", DbType="VarChar(10)")]
+		public string DATE_TO
+		{
+			get
+			{
+				return this._DATE_TO;
+			}
+			set
+			{
+				if ((this._DATE_TO != value))
+				{
+					this._DATE_TO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COGS", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string COGS
+		{
+			get
+			{
+				return this._COGS;
+			}
+			set
+			{
+				if ((this._COGS != value))
+				{
+					this._COGS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ITEM_STYLE", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string ITEM_STYLE
+		{
+			get
+			{
+				return this._ITEM_STYLE;
+			}
+			set
+			{
+				if ((this._ITEM_STYLE != value))
+				{
+					this._ITEM_STYLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALLW_NET", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string ALLW_NET
+		{
+			get
+			{
+				return this._ALLW_NET;
+			}
+			set
+			{
+				if ((this._ALLW_NET != value))
+				{
+					this._ALLW_NET = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALLW_NUM", DbType="Decimal(7,0) NOT NULL")]
+		public decimal ALLW_NUM
+		{
+			get
+			{
+				return this._ALLW_NUM;
+			}
+			set
+			{
+				if ((this._ALLW_NUM != value))
+				{
+					this._ALLW_NUM = value;
 				}
 			}
 		}

@@ -28,6 +28,57 @@
                 </div>
                 <div class="x_content">
                     <a href="#" data-toggle="modal" data-target="#modal_show_details"><i class="fa fa-search"></i></a>
+
+                    <%-- Grid View --%>
+
+                    <asp:GridView ID="lstVendorAllowance"  runat="server" CssClass="table table-hover table-responsive" AutoGenerateColumns="False" 
+                        AllowPaging="True" GridLines="None"  HorizontalAlign="Center" PagerStyle-CssClass="pagination"  PageSize="10" 
+                        DataKeyNames="VENDOR,VENDOR_NAME,DEPARTMENT,SUB_DEPARTMENT,CLASS,SUB_CLASS,ITEM,ITEM_DESC,ALLW_TYPE,PRCNT_OFF,ALLW_DESC,DATE_FROM,DATE_TO,COGS,ITEM_STYLE,ALLW_NET,ALLW_NUM" 
+                        EmptyDataText="No value or Null" ShowHeaderWhenEmpty="True" HeaderStyle-CssClass="no_hover" OnRowCommand="lstVendorAllowance_RowCommand">
+                        <AlternatingRowStyle BackColor="#CCCCCC" />
+                        <Columns>
+                            <asp:TemplateField HeaderText="Vendor No">
+                                <ItemTemplate>
+                                    <asp:Label runat="server" ID="lblVendorNum" Text='<%# Eval("VENDOR") %>' CssClass="text-elipse" style="display: block;"></asp:Label>
+                                </ItemTemplate>
+                                <ItemStyle Width="100" />
+                            </asp:TemplateField>
+                            <%--<asp:BoundField DataField="CategoryDesc" HeaderText="Description" ItemStyle-CssClass="text-elipse" ItemStyle-Width="400px" />--%>
+                            <asp:TemplateField HeaderText="Vendor Name">
+                                <ItemTemplate>
+                                    <asp:Label runat="server" ID="lblVendorName" Text='<%# Eval("VENDOR_NAME") %>' CssClass="text-elipse" style="display: block;" ></asp:Label>
+                                </ItemTemplate>
+                                <ItemStyle Width="250" />
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="ITEM" HeaderText="Item" htmlencode="false" />
+                            <asp:BoundField DataField="ITEM_STYLE" HeaderText="Style" />
+                            <asp:BoundField DataField="PRCNT_OFF" HeaderText="% Off" />
+                            <asp:BoundField DataField="ALLW_DESC" HeaderText="Desc" />
+                            <asp:BoundField DataField="COGS" HeaderText="Affect COGS?" />
+                            <asp:BoundField DataField="ALLW_NET" HeaderText="Affect Net?" />
+                            <asp:TemplateField HeaderText="Date From and To">
+                                <ItemTemplate>
+                                    <asp:Label runat="server" ID="lblDateFromTo" Text='<%# Eval("DATE_FROM") + " to " + Eval("DATE_TO") %>' CssClass="text-elipse" style="display: block;" ></asp:Label>
+                                </ItemTemplate>
+                                <ItemStyle Width="250" />
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton runat="server" ID="linkEdit" data-toggle="modal" data-target="#modal_show_details"  OnClientClick="return true" CommandName="recordSelect" CssClass="table-option">
+                                        <span data-type="tooltip" data-tooltip="Edit" data-pos="right"><i class="material-icons">Select</i></span>
+                                    </asp:LinkButton>
+                                </ItemTemplate>
+                                <ItemStyle Width="50" />
+                            </asp:TemplateField>
+                        </Columns> 
+
+<HeaderStyle CssClass="no_hover"></HeaderStyle>
+
+                        <PagerSettings FirstPageText="&lt;&lt;" LastPageText="&gt;&gt;" Mode="NumericFirstLast" />
+                        <PagerStyle CssClass="pagination pagination-lg" />
+                    </asp:GridView>
+
+                    <%-- Grid View --%>
                 </div>
             </div>
             <div class="modal fade" id="search_modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -132,31 +183,31 @@
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="vcode">Vendor Code</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Vendor Code" aria-label="Vendor Code" aria-describedby="vcode" disabled />
+                            <asp:TextBox ID="vndr" runat="server" CssClass="form-control" Placeholder="Vendor Code1" aria-label="Vendor Code" aria-describedby="vcode" disabled ></asp:TextBox>
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="vname">Vendor Name</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Vendor Name" aria-label="Vendor Code" aria-describedby="vname" disabled />
+                            <input type="text" runat="server" id="VENDOR_NAME" class="form-control" placeholder="Vendor Name" aria-label="Vendor Code" aria-describedby="vname" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon  fixed-width-addon">
                                 <span class="input-group-text" id="dptnum">Department No</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Department No" aria-label="Department No" aria-describedby="dptnum" disabled />
+                            <input type="text" class="form-control" runat="server" id="DEPARTMENT" placeholder="Department No" aria-label="Department No" aria-describedby="dptnum" disabled />
                         </div>
                         <div class="input-group ">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="subdeptno">Sub-dept No</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Sub-dept No" aria-label="Sub-dept No" aria-describedby="subdeptno" disabled />
+                            <input type="text" class="form-control" runat="server" id="SUBDEPARTMENT" placeholder="Sub-dept No" aria-label="Sub-dept No" aria-describedby="subdeptno" disabled />
                         </div>
                         <div class="input-group ">
                             <div class="input-group-addon fixed-width-addon">
-                                <span class="input-group-text" id="subclass">Sub Class</span>
+                                <span class="input-group-text" id="subclass">Class</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Sub Class" aria-label="Sub Class" aria-describedby="subclass" disabled />
+                            <input type="text" class="form-control" runat="server" id="ICLASS" placeholder="Sub Class" aria-label="Sub Class" aria-describedby="subclass" disabled />
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -164,31 +215,31 @@
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="skunum">SKU Number</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="SKU Number" aria-label="SKU Number" aria-describedby="skunum" disabled />
+                            <input type="text" class="form-control" runat="server" id="SKU" placeholder="SKU Number" aria-label="SKU Number" aria-describedby="skunum" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="idescr">Item Name</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Description" aria-label="SKU Number" aria-describedby="idescr" disabled />
+                            <input type="text" class="form-control" runat="server" id="SKUDESC" placeholder="Description" aria-label="SKU Number" aria-describedby="idescr" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="alwtype">Allow Type</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Type" aria-label="Allowance Type" aria-describedby="alwtype" disabled />
+                            <input type="text" class="form-control" runat="server" id="ALLW_TYPE" placeholder="Type" aria-label="Allowance Type" aria-describedby="alwtype" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="alwdesc">Description</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Allowance Description" aria-label="Description" aria-describedby="alwdesc" disabled />
+                            <input type="text" class="form-control" runat="server" id="ALLW_DESC" placeholder="Allowance Description" aria-label="Description" aria-describedby="alwdesc" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="alwnum">Allowance No</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Allowance No" aria-label="Allowance No" aria-describedby="alwnum" disabled />
+                            <input type="text" class="form-control" runat="server" id="ALLW_NO" placeholder="Allowance No" aria-label="Allowance No" aria-describedby="alwnum" disabled />
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -196,31 +247,31 @@
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="percentoff">% off</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="% off" aria-label="% off" aria-describedby="percentoff" disabled />
+                            <input type="text" class="form-control" runat="server" id="PRCNTOFF" placeholder="% off" aria-label="% off" aria-describedby="percentoff" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="datecovered">From & To</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="From & To" aria-label="From & To" aria-describedby="datecovered" disabled />
+                            <input type="text" class="form-control" runat="server" id="FRMANDTO" placeholder="From & To" aria-label="From & To" aria-describedby="datecovered" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="afccst">Affect COGS?</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Affect COGS?" aria-label="Affect COGS?" aria-describedby="afccst" disabled />
+                            <input type="text" class="form-control" runat="server" id="AFCTCOGS" placeholder="Affect COGS?" aria-label="Affect COGS?" aria-describedby="afccst" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="aplnet">Apply to Net?</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Apply to Net?" aria-label="Apply to Net" aria-describedby="aplnet" disabled />
+                            <input type="text" class="form-control" runat="server" id="APPLYNET" placeholder="Apply to Net?" aria-label="Apply to Net" aria-describedby="aplnet" disabled />
                         </div>
                         <div class="input-group">
                             <div class="input-group-addon fixed-width-addon">
                                 <span class="input-group-text" id="styleno">Style No</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Style No" aria-label="Style No" aria-describedby="styleno" disabled />
+                            <input type="text" class="form-control" runat="server" id="STYLENO" placeholder="Style No" aria-label="Style No" aria-describedby="styleno" disabled />
                         </div>
                     </div>
                 </div>
